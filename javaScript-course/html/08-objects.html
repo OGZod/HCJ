@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    const product = {
+      name: 'socks',
+      price: 1090
+    }; //an object let's us group multiple values together
+
+    const product_2 = {
+      name: 'Shirt',
+      ['delivery-time']: '2 days',
+      'pickup-time': '10:05am',
+      rating: {
+        stars: '4.5',
+        count: '87'
+      },
+      fun: function func(){
+        console.log('xxx');
+      }
+    };
+
+    console.log(product);
+    product.price = 3458;
+    console.log(product.price);
+    product.brand = 'nike';
+    console.log(product);
+    delete product.brand;
+    console.log(product);
+
+    console.log(product_2['name']);
+    console.log(product_2['delivery-time']);
+    console.log(product_2['pickup-time']);
+    console.log(product_2.rating.count);
+    product_2.fun();
+
+    console.log(JSON.stringify(product_2));//converts object to json
+    
+    const jsonString = JSON.stringify(product_2);
+    console.log(JSON.parse(jsonString));// converts json to JS object
+    
+  </script>
+</body>
+</html>

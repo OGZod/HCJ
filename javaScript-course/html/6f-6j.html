@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip</title>
+</head>
+<body>
+
+  <p>Choose your side</p>
+
+  <div>
+    <button onclick="flipCoin('heads')">Heads
+    </button>
+
+    <button onclick="flipCoin('tails')">Tails
+    </button>
+  </div>
+  <script>
+    function greet(name){
+      name === undefined? console.log('Hello there!'):
+      console.log(`Hello ${name}`)
+    }
+    greet('Pauly');
+    greet('Ma');
+    greet();
+    function flipCoin(side){
+      const x = Math.random();
+    
+    let result = x;
+
+    if(x<1/2 && side === 'heads'){
+      console.log('You win');
+    }
+    if(x<1/2 && side === 'tails'){
+      console.log('You lose');
+    }
+    if(x>1/2 && side === 'tails'){
+      console.log('You win');
+    }
+    if(x>1/2 && side === 'heads'){
+      console.log('You lose');
+    }
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body{
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.js-Subscribe{
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding:10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.is-Subscribed{
+  background-color: rgb(233, 228, 228);
+  color: black;
+
+}
+
+.js-Cost{
+  font-size: 15px;
+  padding: 10px;
+}
+
+.js-Calculate{
+  background-color: rgb(8, 204, 8);
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 12px 15px;
+  cursor: pointer;
+}

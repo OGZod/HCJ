@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="css\dom.css">
+</head>
+<body>
+
+ <!--DOM: Document Object Model-->
+
+  <p>YouTube Subcribe Button</p>
+
+  <button class ="js-Subscribe" onclick="subscribe()">Subscribe</button>
+
+  <br><br>
+
+  <p>Amazon Shipping Calculator</p>
+
+  <input type="" placeholder="Enter amount" class = "js-Cost" onkeydown="checkKey()">
+
+  <button class="js-Calculate" onclick="calculate()">Calculate</button>
+  
+  <p class="shippingFee"></p>
+  <br><br>
+
+  <input type="" placeholder="Type something" class = "js-OnKeyUp" onkeyup="displayInput()">
+
+  <p class="p-OnKeyUp"></p>
+
+  <script>
+    let clicked = false;
+
+    const inputElement = document.querySelector('.js-Cost');
+
+    const inputElement2 = document.querySelector('.js-OnKeyUp');
+
+   
+
+
+    const pElement = document.querySelector('.shippingFee');
+   
+
+    const pOnKeyUpElement = document.querySelector('.p-OnKeyUp');
+
+    function subscribe(){
+
+      clicked =! clicked;
+
+      document.querySelector('button').innerText = clicked?'Subscribed':'Subscribe';
+
+      clicked ===  true? document.querySelector('button').classList.add('is-Subscribed'):document.querySelector('button').classList.remove('is-Subscribed');
+
+    }
+
+    function calculate(){
+
+      let cost = Number(inputElement.value);
+
+      if(cost < 40){
+        cost = (cost*100 + 1000)/100;
+      
+      }
+
+      console.log(cost);
+        pElement.innerHTML = `Total: $${cost}`;
+    }
+
+    function checkKey(){
+      if(event.key === 'Enter'){
+        calculate();
+      }
+    }
+
+    function displayInput(){
+
+      pOnKeyUpElement.innerHTML = inputElement2.value;
+    }
+  </script>
+</body>
+</html>
