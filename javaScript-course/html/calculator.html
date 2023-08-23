@@ -4,9 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="\javaScript-course\css\calculator.css">
 </head>
 <body>
-  
+  <p class="display"></p>
+
+  <button class="button number" onclick="displayCalculation('1')">1</button>
+  <button class="button number" onclick="displayCalculation('2')">2</button>
+  <button class="button number" onclick="displayCalculation('3')">3</button>
+  <button class="button operation" onclick="displayCalculation(`+`)">+</button>
+  <p></p>
+  <button class="button number" onclick="displayCalculation(`4`)">4</button>
+  <button class="button number" onclick="displayCalculation(`5`)">5</button>
+  <button class="button number" onclick="displayCalculation(`6`)">6</button>
+  <button class="button operation" onclick="displayCalculation(`-`)">-</button>
+  <p></p>
+  <button class="button number" onclick="displayCalculation(`7`)">7</button>
+  <button class="button number" onclick="displayCalculation(`8`)">8</button>
+  <button class="button number" onclick="displayCalculation(`9`)">9</button>
+  <button class="button operation" onclick="displayCalculation(`*`)">*</button>
+  <p></p>
+  <button class="button number" onclick="displayCalculation(`0`)">0</button>
+  <button class="button number" onclick="displayCalculation(`.`)">.</button>
+  <button class="button number" onclick="calculate()">=</button>
+  <button class="button operation" onclick="displayCalculation(`/`)">/</button>
+  <p></p>
+  <button class="button  number clear" onclick="clearDisplay('')">Clear</button>
+
+  <script src="\javaScript-course\js\calculator.js"></script>
+
 </body>
 </html>

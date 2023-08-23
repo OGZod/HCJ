@@ -16,7 +16,6 @@ document.querySelector('.js-Moves').innerHTML = '';
 
 function playGame(playerChoice) {
 let x = Math.random();
-console.log(x);
 
 if (x >= 0 && x < 1/3 && playerChoice === 'rock') {
 
@@ -113,5 +112,30 @@ tie: 0,
 document.querySelector('.js-Result').innerHTML = ``;
 
     document.querySelector('.js-Moves').innerHTML = ``;
+
+}
+let isAutoPlay = false;
+let intervalID;
+const  y = document.querySelector('.js-autoPlay');
+function autoplay(){
+    if(!isAutoPlay){
+     intervalID = setInterval(function(){
+        const x = Math.random();
+        if (x >= 0 && x < 1/3 ){
+            playGame('rock');
+        }
+        if (x >= 1/3 && x < 2/3 ){playGame('paper');}
+        if (x >= 2/3 && x < 1 ){playGame('scissors');}
+        
+    },1000);
+    isAutoPlay = true;
+    y.innerHTML = `Stop Auto Play`
+    }else{
+        clearInterval(intervalID);
+        isAutoPlay = false;
+        y.innerHTML = `Auto Play`
+    }
+    
+    
 
 }

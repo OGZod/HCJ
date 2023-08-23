@@ -1,0 +1,35 @@
+body{
+  font-family:  Arial, sans-serif;
+}
+
+.input{
+  padding: 10px;
+  margin-right: 5px;
+}
+
+button{
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-button{
+  background-color: rgb(19, 211, 19);
+  border: none;
+  padding: 13px 30px;
+}
+
+.delete-button{
+  background-color: rgb(182, 7, 7);
+  border: none;
+  padding: 13px 30px;
+}
+
+.todo-list,.todo-inputs {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  margin: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}

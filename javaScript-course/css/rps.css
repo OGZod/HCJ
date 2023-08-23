@@ -10,7 +10,7 @@ body{
   font-weight: bold;
 }
 
-.js-resetScore{
+.js-resetScore,.js-autoPlay{
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
